@@ -34,10 +34,13 @@ Welcome to the [Daytona](https://www.daytona.io) `content` repository! This repo
     - [Evergreen Content](#evergreen-content)
     - [AI-Generated Content](#ai-generated-content)
   - [Contribution Process](#contribution-process)
+    - [How To Contribute](#how-to-contribute)
     - [Editing Process](#editing-process)
-    - [Publication](#publication)
+    - [Code Contributions](#code-contributions)
     - [Quality Assurance](#quality-assurance)
     - [First Time Contributor](#first-time-contributor)
+    - [Parallel Submissions](#parallel-submissions)
+    - [Publication](#publication)
   - [How to Propose a New Content](#how-to-propose-a-new-content)
   - [Licensing and Copyright](#licensing-and-copyright)
   - [Payment](#payment)
@@ -62,9 +65,11 @@ The `content` repository is a platform where technical writers can contribute ar
 - Incorporate notes, quotes, TL;DR sections, and key points for enhanced readability.
 
 ### Assets
+- Every article should include at least one image or illustration. If you are using someone else's work, please ensure you have permission to do so (copyright) and properly credit the author. You can utilize tools like Excalidraw and Tldraw to create basic illustrations of concepts. While the logic is crucial, aesthetics can be refined later by a designer.
 - Store images in the `/assets` folder within the respective content type folder.
 - Name images consistently: `YYYYMMDD_title_of_the_content_img1.png`.
-- Reference images using relative paths from the `/assets` folder.
+- Reference images using relative paths from the `/assets` folder using Markdown `![Alt text for the image](URL_to_image)`.
+- If any comparisons or quantifiable work are included, they should be presented in tables formatted in Markdown.
 
 ### Fact Checking
 Ensure all information is accurate and up-to-date. Verify facts and cite sources where necessary.
@@ -94,11 +99,13 @@ Remember, good writing is good writing, regardless of how it's produced. Our goa
 
 ## Contribution Process
 
+### How To Contribute
+
 1. Choose an open [issue](https://github.com/daytonaio/content/issues) (proposed article idea).
 2. Fork the repository and create a new branch for your content.
 3. Write your article or guide following the provided templates and guidelines.
 4. Submit a pull request for review.
-5. In the event that multiple PRs are made from different people, we will generally accept those with the clearest writing.
+5. If multiple PRs are submitted by different individuals, we will typically prioritize those that demonstrate the clearest and most well-crafted writing.
 
 ### Editing Process
 - If the PR meets our standards, the issue will be assigned, and the editing process will commence.
@@ -106,8 +113,30 @@ Remember, good writing is good writing, regardless of how it's produced. Our goa
 - Use tools like [Grammarly](https://grammarly.com), [Hemingway App](https://hemingwayapp.com/) and [LanguageTool](https://languagetool.org/) for initial proofreading.
 - Respond promptly to editorial feedback and make necessary revisions.
 
-### Publication
-Upon approval, you'll be informed of the publication date.
+### Code Contributions
+
+If your article includes code examples or projects, please follow these steps:
+
+1. **Create a New Repository**:
+   - Create a new public repository on your GitHub account.
+   - Name it appropriately, related to the article's topic.
+
+2. **Add Code to the Repository**:
+   - Upload all relevant code, scripts, or project files to this new repository.
+   - Ensure the repository includes a README with clear instructions on how to use or run the code.
+
+3. **Link the Repository in Your Article**:
+   - In your article, include a link to this new repository.
+   - Example: "The complete code for this project can be found in `[this GitHub repository](link-to-your-repo)`."
+
+4. **Maintain the Repository**:
+   - Keep the repository updated with any changes or improvements mentioned in your article.
+   - Respond to issues or pull requests from readers who might have questions or suggestions.
+
+5. **License**:
+   - Include an appropriate open-source license in your repository to clarify how others can use or contribute to your code.
+
+By following these steps, you ensure that readers have access to the full code examples and can easily follow along with your article. It also provides a way for the community to engage with your work and potentially contribute improvements.
 
 ### Quality Assurance
 We use `markdownlint` to ensure consistency in Markdown formatting. Run `npm run lint` before submitting your PR to check for any style issues.
@@ -122,6 +151,21 @@ If you're contributing to the Daytona Content Programme for the first time, we r
 5. Place your author image and company logos in the `authors/assets` folder, using clear and descriptive filenames.
 6. In your profile, reference the image and logo files using relative paths from the `authors` folder.
 7. Once you've completed your profile, include it in the same pull request as your first content contribution.
+
+### Parallel Submissions
+
+To ensure fairness and efficiency in our content creation process, we have implemented the following policy regarding parallel submissions:
+
+- An individual author may only have one active attempt (PR) at a time.
+- Parallel attempts on several issues from the same author will not be considered until the first attempt is cleared.
+- Once an author's initial submission is cleared (either approved or not), they may then proceed to work on another issue.
+
+This policy helps us maintain a balanced workload among contributors and ensures that each submission receives the necessary attention and review. It also allows us to provide timely feedback and support to authors throughout the content creation process.
+
+We encourage authors to focus on producing high-quality content for one issue at a time, rather than attempting to work on multiple submissions simultaneously. This approach typically results in better-crafted articles and a more streamlined review process.
+
+### Publication
+Upon approval, you'll be informed of the publication date.
 
 ## How to Propose a New Content
 
